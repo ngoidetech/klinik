@@ -26,7 +26,7 @@ export default () => {
       <Header />
       <MainFeature1
         subheading={<Subheading>About Rumah Sehat Harapan Bunda</Subheading>}
-        heading="We serve the best treatments."
+        heading="We can't fight aging, but we can beautify it"
         buttonRounded={false}
         primaryButtonText="See Portfolio"
         imageSrc={group_photos}
@@ -34,6 +34,7 @@ export default () => {
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}
         heading="We can fill you needs of treatments."
+        description="Enjoy the most complete beauty treatments at Rumah Sehat Harapan Bunda from head to toe. Starting from health and beauty treatment, maternity treatment, postnatal treatment, baby treatment, kids treatment, spa relaxation, everything can be felt at RSHB Sukabumi Cibadak"
         buttonRounded={false}
         primaryButtonText="Contact Us"
         imageSrc={care_photos}

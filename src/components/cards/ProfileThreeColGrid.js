@@ -8,7 +8,10 @@ import {SectionDescription} from "components/misc/Typography";
 import { ReactComponent as TwitterIcon} from "images/twitter-icon.svg";
 import { ReactComponent as LinkedinIcon} from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
-
+import terapis1 from "images/klinik/terapis1.jpeg";
+import terapis2 from "images/klinik/terapis2.jpeg";
+import terapis3 from "images/klinik/terapis3.jpeg";
+import terapis4 from "images/klinik/terapis4.jpeg";
 const HeadingContainer = tw.div``
 const Heading = tw(SectionHeading)``
 const Subheading = tw(SubheadingBase)`text-center mb-3`
@@ -46,9 +49,9 @@ export default ({
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   cards = [
     {
-      imageSrc: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Founder",
-      name: "Adam Cuppy",
+      imageSrc: terapis1,
+      position: "Therapist",
+      name: "Siti Mutmainah",
       links: [
         {
           url: "https://twitter.com",
@@ -65,9 +68,9 @@ export default ({
       ],
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Sr. Designer",
-      name: "Charlotte Hale",
+      imageSrc: terapis2,
+      position: "Therapist",
+      name: "Lismayanti",
       links: [
         {
           url: "https://twitter.com",
@@ -84,9 +87,9 @@ export default ({
       ],
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Jr. Designer",
-      name: "Silvester Wize",
+      imageSrc: terapis3,
+      position: "Therapist",
+      name: "Eki",
       links: [
         {
           url: "https://twitter.com",
@@ -103,9 +106,9 @@ export default ({
       ],
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Lead Developer",
-      name: "Himali Turn",
+      imageSrc: terapis4,
+      position: "Therapist",
+      name: "Wahyu",
       links: [
         {
           url: "https://twitter.com",
@@ -120,45 +123,7 @@ export default ({
           icon: GithubIcon,
         },
       ],
-    },
-    {
-      imageSrc: "https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=3.45&w=512&h=512&q=80",
-      position: "Sr. Developer",
-      name: "Troye Sivan",
-      links: [
-        {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
-        },
-        {
-          url: "https://linkedin.com",
-          icon: LinkedinIcon,
-        },
-        {
-          url: "https://github.com",
-          icon: GithubIcon,
-        },
-      ],
-    },
-    {
-      imageSrc: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=3.45&w=512&h=512&q=80",
-      position: "Quality Assurance",
-      name: "Holo Wo",
-      links: [
-        {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
-        },
-        {
-          url: "https://linkedin.com",
-          icon: LinkedinIcon,
-        },
-        {
-          url: "https://github.com",
-          icon: GithubIcon,
-        },
-      ],
-    },
+    }
   ]
 }) => {
   return (
@@ -167,7 +132,7 @@ export default ({
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           {heading && <Heading>{heading}</Heading> }
-          {description && <Description>{description}</Description> }
+          {/* {description && <Description>{description}</Description> } */}
         </HeadingContainer>
         <Cards>
           {cards.map((card, index) => (

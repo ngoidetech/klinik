@@ -3,7 +3,10 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.js";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "../misc/Headings.js";
 import { PrimaryButton } from "../misc/Buttons.js";
 import { ReactComponent as QuotesLeftIcon } from "../../images/quotes-l.svg";
 import { ReactComponent as QuotesRightIcon } from "../../images/quotes-r.svg";
@@ -11,7 +14,12 @@ import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chev
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
-import blankprofilepicture from "../../images/klinik/blank-profile-picture.png"
+import blankprofilepicture from "../../images/klinik/blank-profile-picture.png";
+import testi1 from "images/klinik/testi1.jpg";
+import testi2 from "images/klinik/testi2.jpg";
+import testi3 from "images/klinik/testi3.jpg";
+import testi4 from "images/klinik/testi4.jpg";
+import testi5 from "images/klinik/testi5.jpg";
 
 import "slick-carousel/slick/slick.css";
 
@@ -26,9 +34,9 @@ const TestimonialTextSlider = tw(Slider)``;
 const TestimonialText = tw.div`outline-none`;
 
 const ImageAndControlContainer = tw.div`relative outline-none`;
-const Image = styled.div(props => [
+const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-cover bg-center h-80 sm:h-96 lg:h-144`
+  tw`rounded bg-cover bg-center h-80 sm:h-96 lg:h-144`,
 ]);
 
 const ControlContainer = tw.div`absolute bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-tl-3xl border`;
@@ -39,9 +47,9 @@ const ControlButton = styled(PrimaryButton)`
   }
 `;
 
-const TextContainer = styled.div(props => [
+const TextContainer = styled.div((props) => [
   tw`flex flex-col w-full lg:w-7/12`,
-  props.textOnLeft ? tw`lg:pr-12 lg:order-first` : tw`lg:pl-12 lg:order-last`
+  props.textOnLeft ? tw`lg:pr-12 lg:order-first` : tw`lg:pl-12 lg:order-last`,
 ]);
 
 const Subheading = tw(SubheadingBase)`mb-4`;
@@ -56,8 +64,12 @@ const CustomerTextInfo = tw.div`text-center lg:text-left sm:ml-6 mt-2 sm:mt-0`;
 const CustomerName = tw.h5`font-semibold text-xl lg:text-2xl xl:text-3xl text-primary-500`;
 const CustomerTitle = tw.p`font-medium text-secondary-100`;
 
-const QuotesLeft = tw(QuotesLeftIcon)`w-6 h-6 opacity-75 text-primary-500 inline-block mr-1 -mt-3`;
-const QuotesRight = tw(QuotesRightIcon)`w-6 h-6 opacity-75 text-primary-500 inline-block ml-1 -mt-3`;
+const QuotesLeft = tw(
+  QuotesLeftIcon
+)`w-6 h-6 opacity-75 text-primary-500 inline-block mr-1 -mt-3`;
+const QuotesRight = tw(
+  QuotesRightIcon
+)`w-6 h-6 opacity-75 text-primary-500 inline-block ml-1 -mt-3`;
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1
@@ -71,7 +83,7 @@ export default ({
   heading = "Testimonials",
   description = "Here are what some of our amazing customers are saying about our treatments. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   testimonials = null,
-  textOnLeft = false
+  textOnLeft = false,
 }) => {
   /*
    * You can modify the testimonials shown by modifying the array below or passing in the testimonials prop above
@@ -79,24 +91,44 @@ export default ({
    */
   const defaultTestimonials = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80",
+      imageSrc: testi1,
       profileImageSrc: blankprofilepicture,
       quote:
-        "Rekomended banget tempatnya. Pelayanan bagus, tempat nyaman. Pokoknya wajib kesini deh!",
-      customerName: "@customer_1"
+        "Kemarin papih pulang kerja langsung kesini buat 'ME TIME' (diajak istrinya tentu saja). apalagi beberapa hari ini berangkat subuh pulang malam terus",
+      customerName: "@yeniishaq87",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1523952578875-e6bb18b26645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+      imageSrc: testi2,
       profileImageSrc: blankprofilepicture,
       quote:
-        "Aku paling suka treatment disini. Terapis nya baik dan ramah semua.",
-      customerName: "@customer_2"
-    }
+        "Berasa lebih muda & cerah ya after perawatan badan & totok wajah di RUMAH SEHAT HARAPAN BUNDA",
+      customerName: "@winadittodaulika",
+    },
+    {
+      imageSrc: testi3,
+      profileImageSrc: blankprofilepicture,
+      quote:
+        "Masya Allah tabbarakallah. Barrakallah ya neng.tempatnya oke. Nyaman, recomended lah pokoknya, buat yang mau manjain badan dari sibuknya kerja, cocok banget tempatnya. Ada di cibadak ya.. Di depan Sekolah YHB. orang sukabumi pasti tau.. Sukses selalu....",
+      customerName: "@vina_larezu",
+    },
+    {
+      imageSrc: testi4,
+      profileImageSrc: blankprofilepicture,
+      quote:
+        "Devinisi nyalon depan rumah",
+      customerName: "@kartikaekawulan",
+    },
+    {
+      imageSrc: testi5,
+      profileImageSrc: blankprofilepicture,
+      quote:
+        "Baby SPA nya lengkap & nyaman untuk bayi",
+      customerName: "@mayuanita",
+    },
   ];
 
-  if (!testimonials || testimonials.length === 0) testimonials = defaultTestimonials;
+  if (!testimonials || testimonials.length === 0)
+    testimonials = defaultTestimonials;
 
   // useState is used instead of useRef below because we want to re-render when sliderRef becomes available (not null)
   const [imageSliderRef, setImageSliderRef] = useState(null);
@@ -105,11 +137,21 @@ export default ({
   return (
     <Container>
       <Content>
-        <HeadingInfo tw="text-center lg:hidden" subheading={subheading} heading={heading} description={description} />
+        <HeadingInfo
+          tw="text-center lg:hidden"
+          subheading={subheading}
+          heading={heading}
+          description={description}
+        />
         <TestimonialsContainer>
           <Testimonials>
             <Testimonial>
-              <TestimonialImageSlider arrows={false} ref={setImageSliderRef} asNavFor={textSliderRef} fade={true}>
+              <TestimonialImageSlider
+                arrows={false}
+                ref={setImageSliderRef}
+                asNavFor={textSliderRef}
+                fade={true}
+              >
                 {testimonials.map((testimonial, index) => (
                   <ImageAndControlContainer key={index}>
                     <Image imageSrc={testimonial.imageSrc} />
@@ -125,8 +167,18 @@ export default ({
                 ))}
               </TestimonialImageSlider>
               <TextContainer textOnLeft={textOnLeft}>
-                <HeadingInfo tw="hidden lg:block" subheading={subheading} heading={heading} description={description} />
-                <TestimonialTextSlider arrows={false} ref={setTextSliderRef} asNavFor={imageSliderRef} fade={true}>
+                <HeadingInfo
+                  tw="hidden lg:block"
+                  subheading={subheading}
+                  heading={heading}
+                  // description={description}
+                />
+                <TestimonialTextSlider
+                  arrows={false}
+                  ref={setTextSliderRef}
+                  asNavFor={imageSliderRef}
+                  fade={true}
+                >
                   {testimonials.map((testimonial, index) => (
                     <TestimonialText key={index}>
                       <QuoteContainer>
@@ -137,9 +189,14 @@ export default ({
                         </Quote>
                       </QuoteContainer>
                       <CustomerInfo>
-                        <CustomerProfilePicture src={testimonial.profileImageSrc} alt={testimonial.customerName} />
+                        <CustomerProfilePicture
+                          src={testimonial.profileImageSrc}
+                          alt={testimonial.customerName}
+                        />
                         <CustomerTextInfo>
-                          <CustomerName>{testimonial.customerName}</CustomerName>
+                          <CustomerName>
+                            {testimonial.customerName}
+                          </CustomerName>
                           {/* <CustomerTitle>{testimonial.customerTitle}</CustomerTitle> */}
                         </CustomerTextInfo>
                       </CustomerInfo>
