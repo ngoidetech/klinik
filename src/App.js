@@ -90,6 +90,12 @@ import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
 // import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 // import ServiceLandingPage from "demos/ServiceLandingPage.js";
 // import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
+import DetailTreatment1 from "pages/DetailTreatment1.js";
+import DetailTreatment2 from "pages/DetailTreatment2.js";
+import DetailTreatment3 from "pages/DetailTreatment3.js";
+import DetailTreatment4 from "pages/DetailTreatment4.js";
+import DetailTreatment5 from "pages/DetailTreatment5.js";
+import DetailTreatment6 from "pages/DetailTreatment6.js";
 
 /* Inner Pages */
 // import LoginPage from "pages/Login.js";
@@ -111,7 +117,6 @@ export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
-
   return (
     <Router>
       <Switch>
@@ -121,9 +126,6 @@ export default function App() {
         <Route path="/components/:type/:name">
           <ComponentRenderer />
         </Route>
-        <Route path="/thank-you">
-          <ThankYouPage />
-        </Route>
         <Route path="/about">
           <AboutUsPage />
         </Route>
@@ -132,6 +134,24 @@ export default function App() {
         </Route>
         <Route path="/contact-us">
           <ContactUsPage />
+        </Route>
+        <Route path="/treatments/health-and-beauty">
+          <DetailTreatment1 />
+        </Route>
+        <Route path="/treatments/baby">
+          <DetailTreatment2 />
+        </Route>
+        <Route path="/treatments/maternity">
+          <DetailTreatment3 />
+        </Route>
+        <Route path="/treatments/kids">
+          <DetailTreatment4 />
+        </Route>
+        <Route path="/treatments/postnatal">
+          <DetailTreatment5 />
+        </Route>
+        <Route path="/treatments/konsultasi">
+          <DetailTreatment6 />
         </Route>
         <Route path="/treatments">
           <Blog />

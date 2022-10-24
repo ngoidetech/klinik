@@ -3,26 +3,34 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings";
-import {SectionDescription} from "components/misc/Typography";
-import { ReactComponent as TwitterIcon} from "images/twitter-icon.svg";
-import { ReactComponent as LinkedinIcon} from "images/linkedin-icon.svg";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings";
+import { SectionDescription } from "components/misc/Typography";
+import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
+import { ReactComponent as LinkedinIcon } from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
 import terapis1 from "images/klinik/terapis1.jpeg";
 import terapis2 from "images/klinik/terapis2.jpeg";
 import terapis3 from "images/klinik/terapis3.jpeg";
 import terapis4 from "images/klinik/terapis4.jpeg";
-const HeadingContainer = tw.div``
-const Heading = tw(SectionHeading)``
-const Subheading = tw(SubheadingBase)`text-center mb-3`
-const Description = tw(SectionDescription)`mx-auto text-center`
+const HeadingContainer = tw.div``;
+const Heading = tw(SectionHeading)``;
+const Subheading = tw(SubheadingBase)`text-center mb-3`;
+const Description = tw(
+  SectionDescription
+)`mx-auto text-center max-w-2xl text-base`;
 
-const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto`
-const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`
+const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto`;
+const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`;
 const CardImage = styled.div`
-  ${props => css`background-image: url("${props.imageSrc}");`}
+  ${(props) =>
+    css`
+      background-image: url("${props.imageSrc}");
+    `}
   ${tw`w-64 h-64 bg-contain bg-center rounded`}
-`
+`;
 const CardContent = styled.div`
   ${tw`flex flex-col items-center mt-6`}
   .position {
@@ -31,17 +39,17 @@ const CardContent = styled.div`
   .name {
     ${tw`mt-1 text-xl font-medium text-gray-900`}
   9
-`
+`;
 
 const CardLinks = styled.div`
-  ${tw`mt-6 flex`}
+  ${tw`mt-2 flex`}
   .link {
     ${tw`mr-8 last:mr-0 text-gray-400 hocus:text-primary-500 transition duration-300`}
     .icon {
       ${tw`fill-current w-6 h-6`}
     }
   }
-`
+`;
 
 export default ({
   heading = "Meet Our Professional Therapist.",
@@ -52,6 +60,7 @@ export default ({
       imageSrc: terapis1,
       position: "Therapist",
       name: "Siti Mutmainah",
+      khusus: "Khusus Untuk Perempuan",
       links: [
         {
           url: "https://twitter.com",
@@ -71,6 +80,7 @@ export default ({
       imageSrc: terapis2,
       position: "Therapist",
       name: "Lismayanti",
+      khusus: "Khusus Untuk Perempuan",
       links: [
         {
           url: "https://twitter.com",
@@ -90,6 +100,7 @@ export default ({
       imageSrc: terapis3,
       position: "Therapist",
       name: "Eki",
+      khusus: "Khusus Untuk Perempuan",
       links: [
         {
           url: "https://twitter.com",
@@ -109,6 +120,7 @@ export default ({
       imageSrc: terapis4,
       position: "Therapist",
       name: "Wahyu",
+      khusus: "Khusus Untuk Laki-Laki",
       links: [
         {
           url: "https://twitter.com",
@@ -123,16 +135,26 @@ export default ({
           icon: GithubIcon,
         },
       ],
-    }
-  ]
+    },
+  ],
 }) => {
   return (
     <Container>
       <ContentWithPaddingXl>
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
-          {heading && <Heading>{heading}</Heading> }
-          {/* {description && <Description>{description}</Description> } */}
+          {heading && <Heading>{heading}</Heading>}
+          {description && (
+            <Description>
+              For the therapists at Rumah Sehat Harapan Bunda, we have 4
+              therapists. Consisting of 3 female therapists and 1 male
+              therapist, treatment services can be adjusted according to
+              customer wishes <br /> <br />
+              Rumah Sehat Harapan Bunda has a training certificate handled
+              directly by expert trainers in the field of massage and SPA, you
+              will be served by professional therapists
+            </Description>
+          )}
         </HeadingContainer>
         <Cards>
           {cards.map((card, index) => (
@@ -141,13 +163,7 @@ export default ({
               <CardContent>
                 <span className="position">{card.position}</span>
                 <span className="name">{card.name}</span>
-                {/* <CardLinks>
-                  {card.links.map((link, linkIndex) => (
-                    <a key={linkIndex} className="link" href={link.url}>
-                      <link.icon className="icon" />
-                    </a>
-                  ))}
-                </CardLinks> */}
+                <CardLinks>({card.khusus})</CardLinks>
               </CardContent>
             </Card>
           ))}

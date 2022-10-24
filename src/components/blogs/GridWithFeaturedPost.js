@@ -10,7 +10,7 @@ import {
 import { SectionDescription } from "components/misc/Typography";
 import { ReactComponent as SvgDotPatternIcon } from "images/dot-pattern.svg";
 import Header from "components/headers/light.js";
-import Footer from "components/footers/MiniCenteredFooter.js";
+import Footer from "components/footers/SimpleFiveColumn.js";
 import foto1 from "images/klinik/foto1.jpg";
 import foto2 from "images/klinik/foto2.jpg";
 import foto3 from "images/klinik/foto3.jpg";
@@ -88,38 +88,38 @@ export default ({
       postImageSrc: foto1,
       title: "HEALTH AND BEAUTY TREATMENT",
       // authorName: "Sam Phipphen",
-      url: "https://reddit.com",
+      url: "/treatments/health-and-beauty",
     },
     {
       postImageSrc: baby,
       title: "BABY TREATMENT",
       // authorName: "Tony Hawk",
-      url: "https://timerse.com",
+      url: "/treatments/baby",
     },
     {
       postImageSrc: foto5,
       title: "MATERNITY TREATMENT",
       // authorName: "Himali Turn",
-      url: "https://timerse.com",
+      url: "/treatments/maternity",
     },
     {
       postImageSrc: foto2,
       title: "KIDS TREATMENT",
       // authorName: "Sam Phipphen",
-      url: "https://reddit.com",
+      url: "/treatments/kids",
     },
     {
       postImageSrc: foto3,
       title: "POSTNATAL TREATMENT",
       // authorName: "Tony Hawk",
-      url: "https://timerse.com",
+      url: "/treatments/postnatal",
     },
     {
       postImageSrc: foto4,
       title: "KONSULTASI",
       authorName:
         "Ditangani oleh ahli bidang kesehatan reproduksi & dokter umum / spesialis",
-      url: "https://timerse.com",
+      url: "/treatments/konsultasi",
     },
   ],
 }) => {
