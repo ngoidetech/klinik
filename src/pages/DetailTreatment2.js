@@ -13,6 +13,9 @@ import Footer from "components/footers/SimpleFiveColumn.js";
 import Header from "components/headers/light.js";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 
+import img1 from "../images/klinik/Treatments2/img1.jpg";
+
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
@@ -56,41 +59,43 @@ const CardMetaFeature = styled.div`
     ${tw`w-5 h-5 mr-1`}
   }
 `;
-const CardAction = tw(PrimaryButtonBase)`w-full mt-8`;
+const CardAction = styled(PrimaryButtonBase).attrs({as: "a"})`
+  ${tw`inline-block w-full mt-8 text-center`}
+`
 
 export default () => {
   const cards = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+        img1,
       type: "Beachfront",
       pricePerDay: "Rp. 50.000",
       title: "Baby Massage",
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+        img1,
       type: "Cruise",
       pricePerDay: "Rp. 65.000",
       title: "Massage Pediatric",
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+        img1,
       type: "Cruise",
       pricePerDay: "Rp. 50.000",
       title: "Newborn Treatment ( Mandi, Perawatan Tali Pusat )",
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+        img1,
       type: "Beachfront",
       pricePerDay: "Rp. 200.000",
       title: "Baby Spa + Brain Game",
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+        img1,
       type: "Cruise",
       pricePerDay: "",
       title: "Newborn Homecare Treatment",
@@ -104,7 +109,7 @@ export default () => {
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+        img1,
       type: "Cruise",
       pricePerDay: "",
       title: "Newborn Homecare Treatment",
@@ -130,7 +135,7 @@ export default () => {
                   <CardImage imageSrc={card.imageSrc} />
                   <CardText>
                     <CardHeader>
-                      <CardType>{card.type}</CardType>
+                      {/* <CardType>{card.type}</CardType> */}
                       <CardPrice>
                         <CardPriceAmount>{card.pricePerDay}</CardPriceAmount>
                       </CardPrice>
@@ -162,7 +167,7 @@ export default () => {
                         <CardMetaFeature>{card.extra3}</CardMetaFeature>
                       )}
                     </CardMeta>
-                    <CardAction>Book Now</CardAction>
+                    <CardAction href="https://api.whatsapp.com/send?phone=6288225851990" target="_blank">Book Now</CardAction>
                   </CardText>
                 </Card>
               </CardColumn>

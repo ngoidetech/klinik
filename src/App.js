@@ -120,12 +120,12 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/components/:type/:subtype/:name">
+        {/* <Route path="/components/:type/:subtype/:name">
           <ComponentRenderer />
         </Route>
         <Route path="/components/:type/:name">
           <ComponentRenderer />
-        </Route>
+        </Route> */}
         <Route path="/about">
           <AboutUsPage />
         </Route>

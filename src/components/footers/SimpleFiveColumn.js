@@ -46,12 +46,13 @@ export default () => {
             <LogoText>Rumah Sehat Harapan Bunda</LogoText>
           </LogoContainer>
           <CompanyDescription>
-            We've been in the beauty business across the world for 5 years now.
-            We assure you that you will always enjoy your stay with us.
+            RSHB Berfokus pada pelayanan klinik kecantikan kualitas tinggi,
+            memberikan perawatan unggulan terbaik, terdepan, dan terpercaya di
+            Indonesia.
           </CompanyDescription>
           <SocialLinksContainer>
             Developed by{" "}
-            <a href="#" tw="text-blue-700 underline">
+            <a href="https://landing-r4tzn4thf-ngoidetech.vercel.app/" target="_blank" tw="text-blue-700 underline">
               NgoideTech
             </a>
           </SocialLinksContainer>

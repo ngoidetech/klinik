@@ -6,6 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ReactComponent as PlusIcon } from "feather-icons/dist/icons/plus.svg";
 import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg";
+import img6 from "images/klinik/question.jpg";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -41,7 +42,7 @@ export default ({
   subheading = "",
   heading = "Questions",
   description = "Here are some frequently asked questions about our place from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
-  imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+  imageSrc = img6,
   imageContain = false,
   imageShadow = true,
   faqs = null
@@ -54,22 +55,22 @@ export default ({
     {
       question: "Terapisnya ada berapa ?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "Terapis di rumah sehat harapan bunda ada 4 terapis, ada 3 terapis khusus perempuan dan 1 terapis khusus laki laki."
     },
     {
       question: "Harga nya mulai dari berapa ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Harga dari rumah sehat harapan bunda menyesuaikan dengan treatment yang diinginkan ya. Untuk selengkapnya silahkan kunjungi menu treatment."
     },
     {
-      question: "Apa ada WIFI di Rumah Sehat Harapan Bunda ?",
+      question: "Apakah terapis sudah bersertifikat ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Tentu saja. Terapis dari rumah sehat harapan bunda semua nya sudah bersertifikasi ya."
     },
     {
       question: "Kalau ingin booking hubungi siapa ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Untuk pemesanan bisa langsung menghubungi nomor whatsapp yang ada di kontak kami atau bisa menekan tombol book now pada tampilan diatas ya."
     }
   ];
 

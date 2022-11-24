@@ -2,9 +2,13 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import home_photo from "../../images/klinik/home_photo.jpg"
+import home_photo from "../../images/klinik/home_photo.jpg";
 
-import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "../headers/light.js";
+import Header, {
+  LogoLink,
+  NavLinks,
+  NavLink as NavLinkBase,
+} from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
   ${tw`justify-between`}
@@ -49,7 +53,7 @@ export default ({
       <NavLink href="/faq">Faq</NavLink>
       <NavLink href="/contact-us">Contact Us</NavLink>
       <NavLink href="/treatments">Treatments</NavLink>
-    </NavLinks>
+    </NavLinks>,
   ],
   heading = (
     <>
@@ -63,7 +67,7 @@ export default ({
   primaryActionUrl = "#",
   primaryActionText = "Sign Up",
   secondaryActionUrl = "#",
-  secondaryActionText = "Search Hotels"
+  secondaryActionText = "Search Hotels",
 }) => {
   return (
     <Container>
@@ -72,13 +76,15 @@ export default ({
           <StyledHeader links={navLinks} collapseBreakpointClass="sm" />
           <Content>
             <Heading>{heading}</Heading>
-            <Paragraph>{description}</Paragraph>
+            <Paragraph>
+              Rumah Sehat Harapan Bunda memberikan pelayanan terbaik secara
+              personal kepada klien kami melalui keahlian dan pengalaman tinggi
+              dari team profesional kami, dan RSHB mengutamakan segi estetika
+              dari bahan alami untuk Anda.
+            </Paragraph>
             <Actions>
-              <a href={primaryActionUrl} className="action primaryAction">
-                {primaryActionText}
-              </a>
-              <a href={secondaryActionUrl} className="action secondaryAction">
-                {secondaryActionText}
+              <a href="https://api.whatsapp.com/send?phone=6288225851990" target="_blank" className="action primaryAction">
+                Book Now
               </a>
             </Actions>
           </Content>

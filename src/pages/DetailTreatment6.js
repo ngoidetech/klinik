@@ -13,6 +13,8 @@ import Footer from "components/footers/SimpleFiveColumn.js";
 import Header from "components/headers/light.js";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 
+import img1 from "../images/klinik/foto4.jpg";
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
@@ -56,41 +58,38 @@ const CardMetaFeature = styled.div`
     ${tw`w-5 h-5 mr-1`}
   }
 `;
-const CardAction = tw(PrimaryButtonBase)`w-full mt-8`;
+const CardAction = styled(PrimaryButtonBase).attrs({ as: "a" })`
+  ${tw`inline-block w-full mt-8 text-center`}
+`;
 
 export default () => {
   const cards = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img1,
       type: "Harga",
       pricePerDay: "Rp. 85.000",
       title: "Konseling Kespro Remaja",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img1,
       type: "Harga",
       pricePerDay: "Rp. 85.000",
       title: "Konseling Usia Subur",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img1,
       type: "Harga",
       pricePerDay: "Rp. 85.000",
       title: "Konseling Lansia",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img1,
       type: "Harga",
       pricePerDay: "Rp. 85.000",
       title: "Konsultasi Perawatan Umum",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img1,
       type: "Harga",
       pricePerDay: "Rp. 85.000",
       title: "Konsultasi COVID-19 / ISOMAN",
@@ -113,7 +112,7 @@ export default () => {
                   <CardImage imageSrc={card.imageSrc} />
                   <CardText>
                     <CardHeader>
-                      <CardType>{card.type}</CardType>
+                      {/* <CardType>{card.type}</CardType> */}
                       <CardPrice>
                         <CardPriceAmount>{card.pricePerDay}</CardPriceAmount>
                       </CardPrice>
@@ -128,7 +127,12 @@ export default () => {
                         <CardMetaFeature>{card.locationText}</CardMetaFeature>
                       </CardMeta>
                     )}
-                    <CardAction>Book Now</CardAction>
+                    <CardAction
+                      href="https://api.whatsapp.com/send?phone=6288225851990"
+                      target="_blank"
+                    >
+                      Book Now
+                    </CardAction>
                   </CardText>
                 </Card>
               </CardColumn>

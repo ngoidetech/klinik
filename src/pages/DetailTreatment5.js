@@ -13,6 +13,9 @@ import Footer from "components/footers/SimpleFiveColumn.js";
 import Header from "components/headers/light.js";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 
+import img2 from "../images/klinik/foto3.jpg";
+import img1 from "../images/klinik/foto5.jpg";
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
@@ -56,41 +59,37 @@ const CardMetaFeature = styled.div`
     ${tw`w-5 h-5 mr-1`}
   }
 `;
-const CardAction = tw(PrimaryButtonBase)`w-full mt-8`;
-
+const CardAction = styled(PrimaryButtonBase).attrs({ as: "a" })`
+  ${tw`inline-block w-full mt-8 text-center`}
+`;
 export default () => {
   const cards = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img1,
       type: "Harga",
       pricePerDay: "Rp. 40.000",
       title: "Senam Nifas",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img2,
       type: "Harga",
       pricePerDay: "Rp. 50.000",
       title: "Breascare / Pijat Laktasi",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img2,
       type: "Harga",
       pricePerDay: "Rp. 100.000",
       title: "Postnatal Massage",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1553194587-b010d08c6c56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img2,
       type: "Harga",
       pricePerDay: "Rp. 100.000",
       title: "Massage Acupresure ( Keluhan )",
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1584200186925-87fa8f93be9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
+      imageSrc: img2,
       type: "Harga",
       pricePerDay: "Rp. 150.000",
       title: "Postnatal Spa + Lulur",
@@ -105,7 +104,7 @@ export default () => {
       type: "Harga",
       pricePerDay: "Rp. 1.500.000",
       title: "Paket Treatment Postnatal Care ( 14 Hari Nifas )",
-    }
+    },
   ];
   return (
     <AnimationRevealPage>
@@ -120,7 +119,7 @@ export default () => {
                   <CardImage imageSrc={card.imageSrc} />
                   <CardText>
                     <CardHeader>
-                      <CardType>{card.type}</CardType>
+                      {/* <CardType>{card.type}</CardType> */}
                       <CardPrice>
                         <CardPriceAmount>{card.pricePerDay}</CardPriceAmount>
                       </CardPrice>
@@ -143,7 +142,12 @@ export default () => {
                         <CardMetaFeature>{card.locationText}</CardMetaFeature>
                       )}
                     </CardMeta>
-                    <CardAction>Book Now</CardAction>
+                    <CardAction
+                      href="https://api.whatsapp.com/send?phone=6288225851990"
+                      target="_blank"
+                    >
+                      Book Now
+                    </CardAction>
                   </CardText>
                 </Card>
               </CardColumn>

@@ -44,24 +44,24 @@ export default ({
   description = "And we have got answers to all of them. Find your question down below.",
   faqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "Terapisnya ada berapa ?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "Terapis di rumah sehat harapan bunda ada 4 terapis, ada 3 terapis khusus perempuan dan 1 terapis khusus laki laki."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Harga nya mulai dari berapa ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Harga dari rumah sehat harapan bunda menyesuaikan dengan treatment yang diinginkan ya. Untuk selengkapnya silahkan kunjungi menu treatment."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "Apakah terapis sudah bersertifikat ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Tentu saja. Terapis dari rumah sehat harapan bunda semua nya sudah bersertifikasi ya."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Kalau ingin booking hubungi siapa ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Untuk pemesanan bisa langsung menghubungi nomor whatsapp yang ada di kontak kami atau bisa menekan tombol book now pada tampilan diatas ya."
     }
   ]
 }) => {
