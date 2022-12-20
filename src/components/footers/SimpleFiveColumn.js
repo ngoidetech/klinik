@@ -52,7 +52,7 @@ export default () => {
           </CompanyDescription>
           <SocialLinksContainer>
             Developed by{" "}
-            <a href="https://landing-r4tzn4thf-ngoidetech.vercel.app/" target="_blank" tw="text-blue-700 underline">
+            <a href="https://landing-coral-three.vercel.app/" target="_blank" tw="text-blue-700 underline">
               NgoideTech
             </a>
           </SocialLinksContainer>
