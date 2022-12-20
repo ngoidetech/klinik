@@ -10,9 +10,9 @@ import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 
-import potoig1 from "../../images/klinik/potoig1.jfif"
-import potoig2 from "../../images/klinik/potoig2.jfif"
-import potoig3 from "../../images/klinik/potoig3.jfif"
+import potoig1 from "../../images/klinik/potoig1.jfif";
+import potoig2 from "../../images/klinik/potoig2.jfif";
+import potoig3 from "../../images/klinik/potoig3.jfif";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -31,7 +31,7 @@ const NextButton = tw(ControlButton)``;
 
 const CardSlider = styled(Slider)`
   ${tw`mt-16`}
-  .slick-track { 
+  .slick-track {
     ${tw`flex`}
   }
   .slick-slide {
@@ -39,9 +39,9 @@ const CardSlider = styled(Slider)`
   }
 `;
 const Card = tw.div`h-full flex! flex-col sm:border max-w-sm sm:rounded-tl-4xl sm:rounded-br-5xl relative focus:outline-none`;
-const CardImage = styled.div(props => [
+const CardImage = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`w-full h-96 sm:h-96 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
+  tw`w-full h-96 sm:h-96 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`,
 ]);
 
 const TextInfo = tw.div`py-6 sm:px-10 sm:py-6`;
@@ -68,7 +68,14 @@ const IconContainer = styled.div`
 `;
 const Text = tw.div`ml-2 text-sm font-semibold text-gray-800`;
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-auto sm:text-lg rounded-none w-full rounded sm:rounded-none sm:rounded-br-4xl py-3 sm:py-6`;
+const PrimaryButton = styled(PrimaryButtonBase).attrs({
+  as: "a",
+})`
+  ${tw`mt-auto sm:text-lg rounded-none w-full rounded sm:rounded-none sm:rounded-br-4xl py-3 sm:py-6`}
+`;
+const CardAction = styled(PrimaryButtonBase).attrs({ as: "a" })`
+  ${tw`inline-block w-full mt-8 text-center`}
+`;
 export default () => {
   // useState is used instead of useRef below because we want to re-render when sliderRef becomes available (not null)
   const [sliderRef, setSliderRef] = useState(null);
@@ -80,16 +87,16 @@ export default () => {
         breakpoint: 1280,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
 
       {
         breakpoint: 900,
         settings: {
           slidesToShow: 1,
-        }
+        },
       },
-    ]
+    ],
   };
 
   /* Change this according to your needs */
@@ -97,52 +104,64 @@ export default () => {
     {
       imageSrc: potoig1,
       title: "Lulur Tubuh",
-      description: "Tidak hanya menjaga kesehatan tubuh, kita juga perlu untuk menjaga kesehatan kulit yaitu salah satunya dengan cara luluran. Adapun manfaatnya sangat baik untuk kesehatan kulit.",
+      description:
+        "Tidak hanya menjaga kesehatan tubuh, kita juga perlu untuk menjaga kesehatan kulit yaitu salah satunya dengan cara luluran. Adapun manfaatnya sangat baik untuk kesehatan kulit.",
       locationText: "Rome, Italy",
       pricingText: "USD 39/Day",
       rating: "4.8",
+      url: "#",
     },
     {
       imageSrc: potoig2,
       title: "Traditional Massage",
-      description: "Traditional massage merupakan salah satu treatment yang dapat meredakan pegal dan nyeri otot akibat aktivitas yang padat. Solusi yang cocok untuk merileksasikan tubuh untuk tetap bugar. Pastinya memiliki manfaat banyak untuk kesehatan tubuh.",
+      description:
+        "Traditional massage merupakan salah satu treatment yang dapat meredakan pegal dan nyeri otot akibat aktivitas yang padat. Solusi yang cocok untuk merileksasikan tubuh untuk tetap bugar. Pastinya memiliki manfaat banyak untuk kesehatan tubuh.",
       locationText: "Ibiza, Spain",
       pricingText: "USD 50/Day",
       rating: 4.9,
+      url: "#",
     },
     {
       imageSrc: potoig3,
       title: "Totok Aura",
-      description: "RSHB menyediakan treatment totok aura yang manfaatnya luar biasa banyak bagi kesehatan tubuh yah. Treatment yang cocok untuk yang kurang tidur, sakit kepala dan lain sebagainya guna merileksasikan. Tidak perlu khawatir untuk harga sangat ekonomis pastinya.",
+      description:
+        "RSHB menyediakan treatment totok aura yang manfaatnya luar biasa banyak bagi kesehatan tubuh yah. Treatment yang cocok untuk yang kurang tidur, sakit kepala dan lain sebagainya guna merileksasikan. Tidak perlu khawatir untuk harga sangat ekonomis pastinya.",
       locationText: "Palo Alto, CA",
       pricingText: "USD 19/Day",
       rating: "5.0",
+      url: "#",
     },
     {
       imageSrc: potoig1,
       title: "Lulur Tubuh",
-      description: "Tidak hanya menjaga kesehatan tubuh, kita juga perlu untuk menjaga kesehatan kulit yaitu salah satunya dengan cara luluran. Adapun manfaatnya sangat baik untuk kesehatan kulit.",
+      description:
+        "Tidak hanya menjaga kesehatan tubuh, kita juga perlu untuk menjaga kesehatan kulit yaitu salah satunya dengan cara luluran. Adapun manfaatnya sangat baik untuk kesehatan kulit.",
       locationText: "Rome, Italy",
       pricingText: "USD 39/Day",
       rating: "4.8",
+      url: "#",
     },
     {
       imageSrc: potoig2,
       title: "Traditional Massage",
-      description: "Traditional massage merupakan salah satu treatment yang dapat meredakan pegal dan nyeri otot akibat aktivitas yang padat. Solusi yang cocok untuk merileksasikan tubuh untuk tetap bugar. Pastinya memiliki manfaat banyak untuk kesehatan tubuh.",
+      description:
+        "Traditional massage merupakan salah satu treatment yang dapat meredakan pegal dan nyeri otot akibat aktivitas yang padat. Solusi yang cocok untuk merileksasikan tubuh untuk tetap bugar. Pastinya memiliki manfaat banyak untuk kesehatan tubuh.",
       locationText: "Ibiza, Spain",
       pricingText: "USD 50/Day",
       rating: 4.9,
+      url: "#",
     },
     {
       imageSrc: potoig3,
       title: "Totok Aura",
-      description: "RSHB menyediakan treatment totok aura yang manfaatnya luar biasa banyak bagi kesehatan tubuh yah. Treatment yang cocok untuk yang kurang tidur, sakit kepala dan lain sebagainya guna merileksasikan. Tidak perlu khawatir untuk harga sangat ekonomis pastinya.",
+      description:
+        "RSHB menyediakan treatment totok aura yang manfaatnya luar biasa banyak bagi kesehatan tubuh yah. Treatment yang cocok untuk yang kurang tidur, sakit kepala dan lain sebagainya guna merileksasikan. Tidak perlu khawatir untuk harga sangat ekonomis pastinya.",
       locationText: "Palo Alto, CA",
       pricingText: "USD 19/Day",
       rating: "5.0",
+      url: "#",
     },
-  ]
+  ];
 
   return (
     <Container>
@@ -150,8 +169,12 @@ export default () => {
         <HeadingWithControl>
           <Heading>Treatments</Heading>
           <Controls>
-            <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
-            <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
+            <PrevButton onClick={sliderRef?.slickPrev}>
+              <ChevronLeftIcon />
+            </PrevButton>
+            <NextButton onClick={sliderRef?.slickNext}>
+              <ChevronRightIcon />
+            </NextButton>
           </Controls>
         </HeadingWithControl>
         <CardSlider ref={setSliderRef} {...sliderSettings}>
@@ -182,7 +205,12 @@ export default () => {
                 </SecondaryInfoContainer> */}
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton>Book Now</PrimaryButton>
+              <PrimaryButton
+                href="https://api.whatsapp.com/send?phone=6288225851990"
+                target="_blank"
+              >
+                Book Now
+              </PrimaryButton>
             </Card>
           ))}
         </CardSlider>

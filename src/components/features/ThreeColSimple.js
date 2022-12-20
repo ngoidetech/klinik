@@ -68,7 +68,7 @@ export default ({
     {
       imageSrc: CustomerLoveIconImage,
       title: "Customer Satisfaction",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      description: "we put our customer satisfaction first",
       url: "#"
     }
   ],

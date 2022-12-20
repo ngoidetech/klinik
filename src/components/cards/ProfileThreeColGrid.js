@@ -59,7 +59,7 @@ export default ({
     {
       imageSrc: terapis1,
       position: "Therapist",
-      name: "Siti Mutmainah",
+      name: "Eki",
       khusus: "Khusus Untuk Perempuan",
       links: [
         {
@@ -99,7 +99,7 @@ export default ({
     {
       imageSrc: terapis3,
       position: "Therapist",
-      name: "Eki",
+      name: "Siti Mutmainah",
       khusus: "Khusus Untuk Perempuan",
       links: [
         {
